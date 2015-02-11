@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hollow, world" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U14-NO-kAg">
-                                <rect key="frame" x="248" y="140" width="104" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hollow, world :D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U14-NO-kAg">
+                                <rect key="frame" x="237" y="140" width="126" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -28,9 +28,12 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="myButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yIa-ma-6lG"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-al-crP">
-                                <rect key="frame" x="96" y="96" width="408" height="408"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-al-crP">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cnC-al-crP" secondAttribute="height" multiplier="1:1" id="laI-rS-Lac"/>
                                 </constraints>
@@ -45,6 +48,9 @@
                             <constraint firstAttribute="centerY" secondItem="U14-NO-kAg" secondAttribute="centerY" constant="150" id="xb1-nH-C2s"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myLabel" destination="U14-NO-kAg" id="sFI-qn-BMd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
