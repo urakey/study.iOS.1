@@ -41,7 +41,7 @@
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="noW-4w-bHf">
                                 <rect key="frame" x="253" y="481" width="94" height="29"/>
                                 <connections>
-                                    <action selector="numStepper:" destination="vXZ-lx-hvc" eventType="valueChanged" id="uGa-Yf-F3A"/>
+                                    <action selector="changeStepperValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Ngi-Xr-U5r"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xG-Ih-Q8S">

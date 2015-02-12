@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     @IBAction func changeStepperValue(sender: UIStepper) {
         let num = Int(sender.value)
-        self.numLabel = num.description
+        self.numLabel.text = num.description
     }
     
     override func viewDidLoad() {
