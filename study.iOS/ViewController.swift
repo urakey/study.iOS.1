@@ -16,6 +16,13 @@ class ViewController: UIViewController {
         self.myLabel.text = "Hello, new world ;D"
     }
     
+    @IBOutlet weak var numLabel: UILabel!
+    
+    @IBAction func changeStepperValue(sender: UIStepper) {
+        let num = Int(sender.value)
+        self.numLabel = num.description
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
