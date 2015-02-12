@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hollow, world :D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U14-NO-kAg">
-                                <rect key="frame" x="237" y="140" width="126" height="20.5"/>
+                                <rect key="frame" x="237" y="140" width="125.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nc-Aj-XHH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nc-Aj-XHH">
                                 <rect key="frame" x="498" y="530" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,9 +41,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9nc-Aj-XHH" secondAttribute="bottom" constant="40" id="Gw6-N9-E50"/>
                             <constraint firstItem="cnC-al-crP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="80" id="JaY-gF-P9W"/>
                             <constraint firstAttribute="centerX" secondItem="U14-NO-kAg" secondAttribute="centerX" id="OFI-a9-FmW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cnC-al-crP" secondAttribute="trailing" constant="80" id="pxW-YO-jK1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9nc-Aj-XHH" secondAttribute="trailing" constant="40" id="q5w-uW-KAP"/>
                             <constraint firstAttribute="centerY" secondItem="cnC-al-crP" secondAttribute="centerY" id="um7-4I-zUy"/>
                             <constraint firstAttribute="centerY" secondItem="U14-NO-kAg" secondAttribute="centerY" constant="150" id="xb1-nH-C2s"/>
                         </constraints>
