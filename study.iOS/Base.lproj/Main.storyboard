@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="YZG-rI-DW0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -15,16 +15,16 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hollow, world :D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U14-NO-kAg">
-                                <rect key="frame" x="237" y="140" width="125.5" height="20.5"/>
+                                <rect key="frame" x="97" y="124" width="125.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nc-Aj-XHH">
-                                <rect key="frame" x="240" y="530" width="120" height="30"/>
+                                <rect key="frame" x="100" y="498" width="120" height="30"/>
                                 <state key="normal" title="Change Message">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -33,23 +33,32 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-al-crP">
-                                <rect key="frame" x="96" y="96" width="408" height="408"/>
+                                <rect key="frame" x="96" y="220" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cnC-al-crP" secondAttribute="height" multiplier="1:1" id="laI-rS-Lac"/>
                                 </constraints>
                             </imageView>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="noW-4w-bHf">
-                                <rect key="frame" x="253" y="481" width="94" height="29"/>
+                                <rect key="frame" x="113" y="449" width="94" height="29"/>
                                 <connections>
                                     <action selector="changeStepperValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Ngi-Xr-U5r"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xG-Ih-Q8S">
-                                <rect key="frame" x="279" y="446" width="42" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xG-Ih-Q8S">
+                                <rect key="frame" x="155" y="414" width="9.5" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDz-Y2-08w" userLabel="移動">
+                                <rect key="frame" x="249" y="518" width="35" height="30"/>
+                                <state key="normal" title=" 移動">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ATg-wi-fRG" kind="push" id="MRF-y3-zUS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -60,18 +69,15 @@
                             <constraint firstAttribute="centerX" secondItem="9nc-Aj-XHH" secondAttribute="centerX" id="LuM-8D-JIG"/>
                             <constraint firstAttribute="centerX" secondItem="U14-NO-kAg" secondAttribute="centerX" id="OFI-a9-FmW"/>
                             <constraint firstItem="noW-4w-bHf" firstAttribute="top" secondItem="9xG-Ih-Q8S" secondAttribute="bottom" constant="15" id="VVp-Ow-7r6"/>
-                            <constraint firstItem="noW-4w-bHf" firstAttribute="top" secondItem="9xG-Ih-Q8S" secondAttribute="bottom" constant="20" id="ZGW-3j-fz5"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="VDz-Y2-08w" secondAttribute="bottom" constant="20" id="m51-Mu-PJP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VDz-Y2-08w" secondAttribute="trailing" constant="20" id="o6d-eq-Hoy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cnC-al-crP" secondAttribute="trailing" constant="80" id="pxW-YO-jK1"/>
                             <constraint firstAttribute="centerX" secondItem="noW-4w-bHf" secondAttribute="centerX" id="tCb-zX-5Pj"/>
                             <constraint firstAttribute="centerY" secondItem="cnC-al-crP" secondAttribute="centerY" id="um7-4I-zUy"/>
                             <constraint firstAttribute="centerY" secondItem="U14-NO-kAg" secondAttribute="centerY" constant="150" id="xb1-nH-C2s"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ZGW-3j-fz5"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="5kH-Pk-vG1"/>
                     <connections>
                         <outlet property="myLabel" destination="U14-NO-kAg" id="sFI-qn-BMd"/>
                         <outlet property="numLabel" destination="9xG-Ih-Q8S" id="NCV-xg-J3J"/>
@@ -79,11 +85,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="166"/>
+            <point key="canvasLocation" x="726" y="157"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xf6-AQ-Tbo">
+            <objects>
+                <viewController id="ATg-wi-fRG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wyr-kI-E7H"/>
+                        <viewControllerLayoutGuide type="bottom" id="iRk-Qf-IYR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BXK-Ev-CA7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dlJ-Ne-IyX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lqC-6P-IZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="157"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jO2-jw-BOP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YZG-rI-DW0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ha-fo-hyP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="OmF-vW-jPn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IuM-Le-H1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="157"/>
         </scene>
     </scenes>
     <resources>
         <image name="photo.jpg" width="500" height="500"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
     <color key="tintColor" red="1" green="0.34083282617125832" blue="0.47974454072890005" alpha="1" colorSpace="calibratedRGB"/>
 </document>
