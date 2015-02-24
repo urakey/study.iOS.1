@@ -19,8 +19,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hollow, world :D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U14-NO-kAg">
-                                <rect key="frame" x="237" y="140" width="125.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="237.5" y="140.5" width="124.5" height="20"/>
+                                <color key="backgroundColor" red="0.98079043810458166" green="1" blue="0.484931971164972" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nc-Aj-XHH">
@@ -32,42 +33,70 @@
                                     <action selector="myButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yIa-ma-6lG"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-al-crP">
-                                <rect key="frame" x="96" y="96" width="408" height="408"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="cnC-al-crP" secondAttribute="height" multiplier="1:1" id="laI-rS-Lac"/>
-                                </constraints>
-                            </imageView>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="noW-4w-bHf">
                                 <rect key="frame" x="253" y="481" width="94" height="29"/>
                                 <connections>
                                     <action selector="changeStepperValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Ngi-Xr-U5r"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xG-Ih-Q8S">
-                                <rect key="frame" x="279" y="446" width="42" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xG-Ih-Q8S">
+                                <rect key="frame" x="295" y="446" width="9.5" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDE-uG-GVt">
+                                <rect key="frame" x="275" y="59" width="51" height="31"/>
+                                <connections>
+                                    <action selector="showHide:" destination="vXZ-lx-hvc" eventType="valueChanged" id="qSZ-ly-fIc"/>
+                                </connections>
+                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-al-crP">
+                                <rect key="frame" x="200" y="180" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4Nl-zf-xRJ"/>
+                                    <constraint firstAttribute="height" constant="500" id="UfF-nK-itx"/>
+                                    <constraint firstAttribute="width" secondItem="cnC-al-crP" secondAttribute="height" multiplier="1:1" id="laI-rS-Lac"/>
+                                    <constraint firstAttribute="width" constant="200" id="lhj-lO-wbJ"/>
+                                    <constraint firstAttribute="height" constant="500" id="rIY-td-PS4"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4Nl-zf-xRJ"/>
+                                        <exclude reference="UfF-nK-itx"/>
+                                        <exclude reference="rIY-td-PS4"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="U14-NO-kAg" firstAttribute="top" secondItem="hDE-uG-GVt" secondAttribute="bottom" constant="50" id="752-kQ-c2Y"/>
+                            <constraint firstAttribute="centerX" secondItem="hDE-uG-GVt" secondAttribute="centerX" id="AJ0-iv-yB5"/>
+                            <constraint firstAttribute="centerX" secondItem="cnC-al-crP" secondAttribute="centerX" id="BgF-X6-KN4"/>
                             <constraint firstAttribute="centerX" secondItem="9xG-Ih-Q8S" secondAttribute="centerX" id="GAu-5e-aPs"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9nc-Aj-XHH" secondAttribute="bottom" constant="40" id="Gw6-N9-E50"/>
                             <constraint firstItem="cnC-al-crP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="80" id="JaY-gF-P9W"/>
                             <constraint firstItem="9nc-Aj-XHH" firstAttribute="top" secondItem="noW-4w-bHf" secondAttribute="bottom" constant="20" id="KRX-hs-wSv"/>
+                            <constraint firstItem="cnC-al-crP" firstAttribute="top" secondItem="U14-NO-kAg" secondAttribute="bottom" constant="30" id="KcZ-fO-C23"/>
                             <constraint firstAttribute="centerX" secondItem="9nc-Aj-XHH" secondAttribute="centerX" id="LuM-8D-JIG"/>
                             <constraint firstAttribute="centerX" secondItem="U14-NO-kAg" secondAttribute="centerX" id="OFI-a9-FmW"/>
                             <constraint firstItem="noW-4w-bHf" firstAttribute="top" secondItem="9xG-Ih-Q8S" secondAttribute="bottom" constant="15" id="VVp-Ow-7r6"/>
                             <constraint firstItem="noW-4w-bHf" firstAttribute="top" secondItem="9xG-Ih-Q8S" secondAttribute="bottom" constant="20" id="ZGW-3j-fz5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cnC-al-crP" secondAttribute="trailing" constant="80" id="pxW-YO-jK1"/>
+                            <constraint firstAttribute="centerY" secondItem="cnC-al-crP" secondAttribute="centerY" id="h7Y-1S-cE2"/>
+                            <constraint firstItem="cnC-al-crP" firstAttribute="top" secondItem="U14-NO-kAg" secondAttribute="bottom" constant="20" id="nCS-dA-wKN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cnC-al-crP" secondAttribute="trailing" constant="288" id="pxW-YO-jK1"/>
                             <constraint firstAttribute="centerX" secondItem="noW-4w-bHf" secondAttribute="centerX" id="tCb-zX-5Pj"/>
-                            <constraint firstAttribute="centerY" secondItem="cnC-al-crP" secondAttribute="centerY" id="um7-4I-zUy"/>
+                            <constraint firstAttribute="centerY" secondItem="cnC-al-crP" secondAttribute="centerY" constant="104" id="um7-4I-zUy"/>
                             <constraint firstAttribute="centerY" secondItem="U14-NO-kAg" secondAttribute="centerY" constant="150" id="xb1-nH-C2s"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="JaY-gF-P9W"/>
+                                <exclude reference="KcZ-fO-C23"/>
+                                <exclude reference="h7Y-1S-cE2"/>
+                                <exclude reference="pxW-YO-jK1"/>
+                                <exclude reference="um7-4I-zUy"/>
                                 <exclude reference="ZGW-3j-fz5"/>
                             </mask>
                         </variation>
