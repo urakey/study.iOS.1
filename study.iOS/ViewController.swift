@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         self.numLabel.text = num.description
     }
     
+    @IBAction func showHide(sender: UISwitch) {
+        self.myLabel.hidden = !sender.on
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
