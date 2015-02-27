@@ -42,6 +42,11 @@ class ViewController: UIViewController {
             
         }
     }
+
+    @IBOutlet weak var myCat: UIImageView!
+    @IBAction func changeImageAlpha(sender: UISlider) {
+        self.myCat.alpha = CGFloat(sender.value)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
