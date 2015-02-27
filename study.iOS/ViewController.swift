@@ -27,6 +27,22 @@ class ViewController: UIViewController {
         self.myLabel.hidden = !sender.on
     }
     
+    @IBOutlet weak var bgColor: UIView!
+    
+    @IBAction func changeBgColor(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.bgColor.backgroundColor = UIColor.blackColor()
+        case 1:
+            self.bgColor.backgroundColor = UIColor.darkGrayColor()
+        case 2:
+            self.bgColor.backgroundColor = UIColor.grayColor()
+        default:
+            self.bgColor.backgroundColor = UIColor.blackColor()
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

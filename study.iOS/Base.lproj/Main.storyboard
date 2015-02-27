@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -18,8 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyL-el-6Ei">
+                                <rect key="frame" x="16" y="185" width="568" height="200"/>
+                                <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="EQY-AR-gDL"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hollow, world :D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U14-NO-kAg">
-                                <rect key="frame" x="237.5" y="140.5" width="124.5" height="20"/>
+                                <rect key="frame" x="237" y="140" width="124.5" height="20"/>
                                 <color key="backgroundColor" red="0.98079043810458166" green="1" blue="0.484931971164972" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -46,13 +53,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDE-uG-GVt">
-                                <rect key="frame" x="275" y="59" width="51" height="31"/>
+                                <rect key="frame" x="275" y="89" width="51" height="31"/>
                                 <connections>
                                     <action selector="showHide:" destination="vXZ-lx-hvc" eventType="valueChanged" id="qSZ-ly-fIc"/>
                                 </connections>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-al-crP">
-                                <rect key="frame" x="200" y="180" width="200" height="200"/>
+                                <rect key="frame" x="200" y="185" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="4Nl-zf-xRJ"/>
                                     <constraint firstAttribute="height" constant="500" id="UfF-nK-itx"/>
@@ -68,40 +75,41 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="re7-4k-dcv">
+                                <rect key="frame" x="192" y="408" width="215" height="29"/>
+                                <segments>
+                                    <segment title="Black"/>
+                                    <segment title="DarkGray"/>
+                                    <segment title="Gray"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeBgColor:" destination="vXZ-lx-hvc" eventType="valueChanged" id="1ev-zS-bIP"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="U14-NO-kAg" firstAttribute="top" secondItem="hDE-uG-GVt" secondAttribute="bottom" constant="50" id="752-kQ-c2Y"/>
+                            <constraint firstItem="U14-NO-kAg" firstAttribute="top" secondItem="hDE-uG-GVt" secondAttribute="bottom" constant="20" id="752-kQ-c2Y"/>
                             <constraint firstAttribute="centerX" secondItem="hDE-uG-GVt" secondAttribute="centerX" id="AJ0-iv-yB5"/>
+                            <constraint firstItem="9xG-Ih-Q8S" firstAttribute="top" secondItem="re7-4k-dcv" secondAttribute="bottom" constant="10" id="BZ8-p9-g0L"/>
                             <constraint firstAttribute="centerX" secondItem="cnC-al-crP" secondAttribute="centerX" id="BgF-X6-KN4"/>
                             <constraint firstAttribute="centerX" secondItem="9xG-Ih-Q8S" secondAttribute="centerX" id="GAu-5e-aPs"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9nc-Aj-XHH" secondAttribute="bottom" constant="40" id="Gw6-N9-E50"/>
-                            <constraint firstItem="cnC-al-crP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="80" id="JaY-gF-P9W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MyL-el-6Ei" secondAttribute="trailing" id="HSR-1h-wlh"/>
                             <constraint firstItem="9nc-Aj-XHH" firstAttribute="top" secondItem="noW-4w-bHf" secondAttribute="bottom" constant="20" id="KRX-hs-wSv"/>
-                            <constraint firstItem="cnC-al-crP" firstAttribute="top" secondItem="U14-NO-kAg" secondAttribute="bottom" constant="30" id="KcZ-fO-C23"/>
                             <constraint firstAttribute="centerX" secondItem="9nc-Aj-XHH" secondAttribute="centerX" id="LuM-8D-JIG"/>
                             <constraint firstAttribute="centerX" secondItem="U14-NO-kAg" secondAttribute="centerX" id="OFI-a9-FmW"/>
                             <constraint firstItem="noW-4w-bHf" firstAttribute="top" secondItem="9xG-Ih-Q8S" secondAttribute="bottom" constant="15" id="VVp-Ow-7r6"/>
-                            <constraint firstItem="noW-4w-bHf" firstAttribute="top" secondItem="9xG-Ih-Q8S" secondAttribute="bottom" constant="20" id="ZGW-3j-fz5"/>
-                            <constraint firstAttribute="centerY" secondItem="cnC-al-crP" secondAttribute="centerY" id="h7Y-1S-cE2"/>
-                            <constraint firstItem="cnC-al-crP" firstAttribute="top" secondItem="U14-NO-kAg" secondAttribute="bottom" constant="20" id="nCS-dA-wKN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cnC-al-crP" secondAttribute="trailing" constant="288" id="pxW-YO-jK1"/>
+                            <constraint firstItem="cnC-al-crP" firstAttribute="top" secondItem="U14-NO-kAg" secondAttribute="bottom" constant="25" id="nCS-dA-wKN"/>
+                            <constraint firstItem="MyL-el-6Ei" firstAttribute="top" secondItem="U14-NO-kAg" secondAttribute="bottom" constant="25" id="qBn-Kd-pkF"/>
                             <constraint firstAttribute="centerX" secondItem="noW-4w-bHf" secondAttribute="centerX" id="tCb-zX-5Pj"/>
-                            <constraint firstAttribute="centerY" secondItem="cnC-al-crP" secondAttribute="centerY" constant="104" id="um7-4I-zUy"/>
+                            <constraint firstAttribute="centerX" secondItem="re7-4k-dcv" secondAttribute="centerX" id="tzU-gv-FqY"/>
                             <constraint firstAttribute="centerY" secondItem="U14-NO-kAg" secondAttribute="centerY" constant="150" id="xb1-nH-C2s"/>
+                            <constraint firstItem="MyL-el-6Ei" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="zmw-ve-cdQ"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="JaY-gF-P9W"/>
-                                <exclude reference="KcZ-fO-C23"/>
-                                <exclude reference="h7Y-1S-cE2"/>
-                                <exclude reference="pxW-YO-jK1"/>
-                                <exclude reference="um7-4I-zUy"/>
-                                <exclude reference="ZGW-3j-fz5"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
+                        <outlet property="bgColor" destination="MyL-el-6Ei" id="07Y-1p-vhU"/>
                         <outlet property="myLabel" destination="U14-NO-kAg" id="sFI-qn-BMd"/>
                         <outlet property="numLabel" destination="9xG-Ih-Q8S" id="NCV-xg-J3J"/>
                     </connections>
