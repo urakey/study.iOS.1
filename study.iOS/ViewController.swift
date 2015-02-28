@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var myLabel: UILabel!
     
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         let num = Int(sender.value)
         self.numLabel.text = num.description
     }
-    
+  
     @IBAction func showHide(sender: UISwitch) {
         self.myLabel.hidden = !sender.on
     }
@@ -48,9 +48,32 @@ class ViewController: UIViewController {
         self.myCat.alpha = CGFloat(sender.value)
     }
     
+    @IBOutlet weak var myTextField: UITextField!
+    
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        var tmpStr = textField.text as NSString
+        tmpStr = tmpStr.stringByReplacingCharactersInRange(range, withString: string)
+        
+        if tmpStr == "" {
+            self.myLabel.text = "Hello, world :D"
+        } else {
+            self.myLabel.text = tmpStr
+        }
+        
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        // 改行は反映しない
+        return false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.myTextField.delegate = self;
     }
 
     override func didReceiveMemoryWarning() {
