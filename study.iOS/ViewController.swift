@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var myLabel: UILabel!
     
@@ -70,10 +70,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    @IBOutlet weak var myPickerView: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.myTextField.delegate = self;
+        self.myPickerView.delegate = self;
+        self.myPickerView.dataSource = self;
     }
 
     override func didReceiveMemoryWarning() {
