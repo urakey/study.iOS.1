@@ -72,6 +72,46 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     
     @IBOutlet weak var myPickerView: UIPickerView!
     
+    let compos = [["Sun", "Mon", "Teu", "Wed", "Thu", "Fri", "Sat"], ["09:00", "11:00", "13:00", "15:00", "17:00", "19:00", "21:00"]]
+    
+    // ピッカービューのコンポーネントの個数を返す
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return compos.count
+    }
+    
+    // 各コンポーネントの行数を返す
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        let compo = compos[component]
+        return compo.count
+    }
+    
+    // 各コンポーネントの横幅を返す
+    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        if component == 0 {
+            return 100
+        } else {
+            return 120
+        }
+    }
+    
+    // 指定のコンポーネント、行の項目名を返す
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        let item = compos[component][row]
+        return item
+    }
+    
+    // ドラムが回転して項目が選ばれた
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let item = compos[component][row]
+        println("\(item)がえらばれました")
+        
+        let row1 = pickerView.selectedRowInComponent(0)
+        let row2 = pickerView.selectedRowInComponent(1)
+        let item1 = self.pickerView(pickerView, titleForRow:row1, forComponent:0)
+        let item2 = self.pickerView(pickerView, titleForRow:row2, forComponent:1)
+        println("現在えらばれているのは\(item1, item2)")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
