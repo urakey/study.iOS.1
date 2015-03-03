@@ -143,11 +143,10 @@
                                         <exclude reference="aUj-bd-npu"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="334" y="50" width="52" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="7lF-Kb-nyF"/>
-                                        <include reference="aUj-bd-npu"/>
+                                        <exclude reference="7lF-Kb-nyF"/>
+                                        <exclude reference="aUj-bd-npu"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -161,7 +160,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MyL-el-6Ei" firstAttribute="top" secondItem="9nc-Aj-XHH" secondAttribute="bottom" constant="15" id="4cw-cr-2Tw"/>
-                            <constraint firstItem="hDE-uG-GVt" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="6Yd-7y-a0p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hDE-uG-GVt" secondAttribute="trailing" id="655-kg-IV6"/>
                             <constraint firstItem="9nc-Aj-XHH" firstAttribute="top" secondItem="KH5-5J-P7l" secondAttribute="bottom" constant="5" id="8ZX-sx-uWG"/>
                             <constraint firstAttribute="centerX" secondItem="MyL-el-6Ei" secondAttribute="centerX" id="8dK-bi-0Og"/>
                             <constraint firstAttribute="centerX" secondItem="cnC-al-crP" secondAttribute="centerX" id="BgF-X6-KN4"/>
@@ -170,6 +169,7 @@
                             <constraint firstItem="U14-NO-kAg" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="50" id="HMn-T0-tOo"/>
                             <constraint firstItem="MyL-el-6Ei" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Kub-Th-Gh0"/>
                             <constraint firstAttribute="centerX" secondItem="U14-NO-kAg" secondAttribute="centerX" id="OFI-a9-FmW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hDE-uG-GVt" secondAttribute="trailing" id="P3o-Zu-Yuj"/>
                             <constraint firstAttribute="centerX" secondItem="9nc-Aj-XHH" secondAttribute="centerX" id="PDS-jd-LoD"/>
                             <constraint firstItem="KH5-5J-P7l" firstAttribute="top" secondItem="U14-NO-kAg" secondAttribute="bottom" constant="15" id="R7C-pY-ekl"/>
                             <constraint firstItem="re7-4k-dcv" firstAttribute="top" secondItem="90a-Z3-5P0" secondAttribute="bottom" constant="15" id="SeC-9o-1XB">
@@ -197,6 +197,16 @@
                             <constraint firstAttribute="centerX" secondItem="re7-4k-dcv" secondAttribute="centerX" id="tzU-gv-FqY"/>
                             <constraint firstAttribute="trailing" secondItem="MyL-el-6Ei" secondAttribute="trailing" id="wLd-c4-eXc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="P3o-Zu-Yuj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="P3o-Zu-Yuj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="4t7-8B-kgC"/>
                     <connections>
