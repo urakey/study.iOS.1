@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if tmpStr == "" {
             self.myLabel.text = "Hello, world :D"
         } else {
-            self.myLabel.text = tmpStr
+            self.myLabel.text = tmpStr as String
         }
         
         return true

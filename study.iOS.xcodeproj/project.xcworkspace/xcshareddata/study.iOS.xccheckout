@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D73C8C25CBBC96BEC445D898E7911557CCEDC1F3</key>
-		<string>github.com:urakey/study.iOS.git</string>
+		<string>github.com:urakey/study.iOS.1.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>study.iOS.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:urakey/study.iOS.git</string>
+	<string>github.com:urakey/study.iOS.1.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>D73C8C25CBBC96BEC445D898E7911557CCEDC1F3</string>
 			<key>IDESourceControlWCCName</key>
-			<string>study.iOS</string>
+			<string>study.iOS.1</string>
 		</dict>
 	</array>
 </dict>
